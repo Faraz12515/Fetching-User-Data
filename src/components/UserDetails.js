@@ -11,31 +11,29 @@ function UserDetails(props) {
   });
   console.log("userDetails :>> ", userDetails);
   return (
-    <div>
-      <h1 className="text-center border border-bottom border-dark">
-        UserDetails
-      </h1>
-      <div className="row d-flex justify-content-center">
+    <div className="bg" style={{ height: "100vh" }}>
+      <h1 className="text-center rounded">UserDetails</h1>
+      <div className="container-fluid d-flex justify-content-center">
         {userDetails.map((user, i) => {
           return (
             <div
               key={user.id}
-              className="col-md-4 d-flex justify-content-center px-2 mt-5"
+              className="col-md-4 d-flex justify-content-center px-2 my-5"
             >
-              <div class="card" style={{ width: "18rem" }}>
-                {/* <img src="..." class="card-img-top" alt="..." /> */}
-                <div class="card-body">
-                  <h5 class="card-title">{user.name}</h5>
-                  <p class="card-text">
+              <div className="card" style={{ width: "18rem" }}>
+                {/* <img src="..." className="card-img-top" alt="..." /> */}
+                <div className="card-body">
+                  <h5 className="card-title">{user.name}</h5>
+                  <p className="card-text">
                     {user.address.city},{user.address.street}{" "}
                     {user.address.suit}
                     {user.address.zipcode}
                   </p>
                 </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">{user.username}</li>
-                  <li class="list-group-item">{user.email}</li>
-                  <li class="list-group-item">{user.phone}</li>
+                <ul className="list-group list-group-flush">
+                  <li className="list-group-item">{user.username}</li>
+                  <li className="list-group-item">{user.email}</li>
+                  <li className="list-group-item">{user.phone}</li>
                 </ul>
               </div>
             </div>

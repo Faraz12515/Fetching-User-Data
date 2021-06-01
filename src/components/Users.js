@@ -25,40 +25,42 @@ export default function Users() {
   };
 
   return (
-    <div>
-      <h1 className="text-center border border-bottom border-dark">Users</h1>
-      <div className="row">
-        {user_data.map((v, i) => {
-          return (
-            <div
-              key={v.id}
-              className="col-md-4 d-flex justify-content-center px-2 mt-5"
-            >
-              <div class="card" style={{ width: "18rem" }}>
-                {/* <img src="..." class="card-img-top" alt="..." /> */}
-                <div class="card-body">
-                  <h5 class="card-title">{v.name}</h5>
-                  <p class="card-text">
-                    {v.address.city},{v.address.street} {v.address.suit}
-                    {v.address.zipcode}
-                  </p>
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">{v.username}</li>
-                  <li class="list-group-item">{v.email}</li>
-                  <li class="list-group-item">{v.phone}</li>
-                </ul>
-                <div class="card-body">
-                  <div className="d-flex justify-content-center">
-                    <Link class="btn btn-dark" to={`/users/${v.id}`}>
-                      User Details
-                    </Link>
+    <div className="bg">
+      <h1 className="text-center rounded">Users</h1>
+      <div className="container-fluid">
+        <div className="row">
+          {user_data.map((v, i) => {
+            return (
+              <div
+                key={v.id}
+                className="col-md-4 d-flex justify-content-center px-2 my-5"
+              >
+                <div className="card" style={{ width: "18rem" }}>
+                  {/* <img src="..." className="card-img-top" alt="..." /> */}
+                  <div className="card-body">
+                    <h5 className="card-title">{v.name}</h5>
+                    <p className="card-text">
+                      {v.address.city},{v.address.street} {v.address.suit}
+                      {v.address.zipcode}
+                    </p>
+                  </div>
+                  <ul className="list-group list-group-flush">
+                    <li className="list-group-item">{v.username}</li>
+                    <li className="list-group-item">{v.email}</li>
+                    <li className="list-group-item">{v.phone}</li>
+                  </ul>
+                  <div className="card-body">
+                    <div className="d-flex justify-content-center">
+                      <Link className="btn btn-dark" to={`/users/${v.id}`}>
+                        User Details
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </div>
   );

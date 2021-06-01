@@ -16,3 +16,7 @@ code {
 h1 {
   background: linear-gradient(90deg, #89f7fe 0%, #66a6ff 100%);
 }
+
+.bg {
+  background: linear-gradient(90deg, #ad5389 0%, #3c1053 100%);
+}
