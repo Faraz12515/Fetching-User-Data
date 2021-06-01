@@ -12,6 +12,9 @@ code {
     monospace;
 }
 
+h1 {
+  color: #353a40;
+}
 .card,
 h1 {
   background: linear-gradient(90deg, #89f7fe 0%, #66a6ff 100%);

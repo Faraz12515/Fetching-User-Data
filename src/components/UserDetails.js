@@ -12,7 +12,7 @@ function UserDetails(props) {
   console.log("userDetails :>> ", userDetails);
   return (
     <div className="bg" style={{ height: "100vh" }}>
-      <h1 className="text-center rounded">UserDetails</h1>
+      <h1 className="text-center rounded py-2">User Details</h1>
       <div className="container-fluid d-flex justify-content-center">
         {userDetails.map((user, i) => {
           return (

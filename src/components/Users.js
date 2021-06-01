@@ -26,7 +26,7 @@ export default function Users() {
 
   return (
     <div className="bg">
-      <h1 className="text-center rounded">Users</h1>
+      <h1 className="text-center rounded py-2">Users</h1>
       <div className="container-fluid">
         <div className="row">
           {user_data.map((v, i) => {
